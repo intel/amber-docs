@@ -1,0 +1,2 @@
+# Amber Use Case Examples
+This section contains examples of how Amber can be used in various industries. Any industry that requires a save as secure method to transfer data and files from one computer, system, netowrk or node to another, can benefit from Amber. The use case examples in the section will show you how Amber achieves this for less money using less compute power.
