@@ -7,7 +7,7 @@ Amber provides a secure environment to process informaiton. When combined with A
 Complete these tasks before building the TCS.
 - Install version 1.18.6 of Go (https://go.dev/dl/) on the build machine.
 
-- Install versaion 11 of [Postgres db] (https://www.postgresql.org/download/). Create a username and a set a password.
+- Install versaion 11 of [Postgres db] (https://www.postgresql.org). Create a username and a set a password.
 
 ## Build Binaries for TCS
 Follow these instructions to build TCS binaries.

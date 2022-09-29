@@ -59,14 +59,15 @@ nav:
       - Reports and Metrics: workflow/tutorials/reports-metrics.md
     - Use Case Examples:
       - Overview: workflow/Use-Cases/overview.md
+      - Zero Trust Network Access: workflow/Use-Cases/Zero Trust Network Access.md
       - Block Chain: workflow/Use-Cases/Block Chain.md
       - Confidential Container Using Gramine: workflow/Use-Cases/Confidential Container User Gramine.md
--     - Federal Learning: workflow/Use-Cases/Federal Learning.md
+      - Federal Learning: workflow/Use-Cases/Federal Learning.md
       - Privacy Preserving Confidential Computing: workflow/Use-Cases/Privacy Preserving Confidential Computing.md
       - Privacy Preserving Machine Learning: workflow/Use-Cases/Privacy Preserving Machine Learning.md
       - Secret Key Management: workflow/Use-Cases/Secret Key Management.md
       - Trusted Multi-Party Compute: workflow/Use-Cases/Trusted Multi-Party Compute.md
-      - Zero Trust Network Access: workflow/Use-Cases/Zero Trust Network Access.md
+      
     - CLI:
       - CLI Examples: workflow/cli/cli-examples.md
     - Value Added Services:
@@ -91,8 +92,8 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
         
-   logo: images/IntelLogo.png
-   favicon: images/IntelLogo.png
+   logo: images/InteLogo.png
+   favicon: images/InteLogo.png
    icon:
     repo: fontawesome/brands/github
    features:
@@ -127,7 +128,7 @@ markdown_extensions:
 
 theme:
    name: material
-   logo: assets/IntelLogo.png
+   logo: assets/InteLogo.png
    font: 
      code: Fira Code
      text: Helvetica               

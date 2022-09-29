@@ -62,3 +62,60 @@ The Key Broker Service can be run as a VM or as a bare-metal server.
     - kbs stop
     - kbs start
 
+## KBS Key Creation and Key Retrieval Steps
+
+Once the KBS service is installed and running successfully, follow the below steps to create keys and retrieve them. The KBS system admin user must use the admin credentials provided during KBS installation to retrieve the “admin” user token. This user token has admin privileges to KBS, i.e. access to all KBS REST APIs. 
+1.	Using the token, create key transfer policies by defining the rules to retrieve the keys from the backend KMS(KMIP).  
+2. Use the KeysCcreate API to create new keys and provide the key-transfer-policy ID in the POST request. <br>
+The KBS client will take the KBS key transfer URL as a config parameter. The client will then use the provided KBS URL to retrieve the KBS key using either the passport or background verification mode. 
+
+**_NOTE:_** Please use the swagger docs to refer to each of the API’s mentioned above to create a token, keys etc. 
+
+## API Docs
+The swagger document for all KBS API’s can be found <here>
+
+## KMS Installation – pykmip
+
+Use the steps below install and run a pykmip server successfully. 
+1.	Install python3 and vim-common.<br>
+    `
+    For RHEL 8.2
+    # dnf -y install python3-pip vim-common 
+
+    For Ubuntu 18.04/20.04   
+    # apt -y install python3-pip vim-common    
+    ln -s /usr/bin/python3 /usr/bin/python  > /dev/null 2>&1
+    ln -s /usr/bin/pip3 /usr/bin/pip  > /dev/null 2>&1
+    `
+
+2.	Install pykmip.<br>
+    ```
+    pip3 install pykmip==0.9.1
+    ```
+3.	In the /etc/ directory create pykmip and policies folders.<br>
+    ```
+    mkdir -p /etc/pykmip/policies
+    ```
+4.	Configure pykmip server using server.conf.<br>
+    ```
+    Update hostname in the server.conf
+    ```
+5.	Copy the following to /etc/pykmip/ from kbs resources available from the amber UI.<br> 
+    ```
+    create_certificates.py, run_server.py, server.conf
+    ```
+6.	Create certificates.
+    ```
+    > cd /etc/pykmip
+    > python3 create_certificates.py <KMIP Host IP/KMIP Host FQDN>
+    ```
+7.	Kill running KMIP Server processes and wait for 10 seconds until all the KMIP Server processes are killed.
+    ```
+    > ps -ef | grep run_server.py | grep -v grep | awk '{print $2}' | xargs kill
+     ```
+8.	Run pykmip server using run_server.py script.
+    ```
+    > python3 run_server.py &
+    ```
+
+
