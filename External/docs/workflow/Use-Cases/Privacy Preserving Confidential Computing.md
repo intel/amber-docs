@@ -1,2 +1,0 @@
-# Privacy Preserving Confidential Computing (PPCC)
-Privacy preserving does not just apply to machine learning, but also in many fields, for example, medical records sharing, or other private data sharing and downloading. In such scenario, the private information needs to be downloaded and processed in another location. To protect the private data in transit and in-use at the remote location, the computing asset in the remote location needs to run in a TEE. Amber can be integrated to help enforce the remote party indeed runs in such environment
