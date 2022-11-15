@@ -1,3 +1,0 @@
-# Placeholder - API 1 Parameters
-
-API1 parameters...
